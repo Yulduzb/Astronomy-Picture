@@ -10,6 +10,7 @@
 
 body {
     background: linear-gradient(99.9deg, rgba(27, 24, 31, 1) 21.2%, rgba(50, 4, 89, 1) 84.8%);
+    position: relative;
 
 }
 
@@ -108,7 +109,7 @@ button i:hover {
     justify-content: center;
     align-items: center;
     max-width: 85%;
-   
+
 
 
 }
@@ -120,14 +121,14 @@ button i:hover {
     border-radius: 20px;
     background-color: transparent;
     cursor: pointer;
-    pointer-events: none;
+
 }
 
 .image {
     width: 300px;
     height: 300px;
     overflow: hidden;
-    
+
 }
 
 .image>img {
@@ -138,7 +139,7 @@ button i:hover {
     border-radius: 20px;
     transition: transform .3s ease-in;
     cursor: pointer;
-  
+
 
 
 }
@@ -165,52 +166,81 @@ button i:hover {
 
 
 /*=========data-container=====================*/
+
+
+
+
+
+
+
+
 .container-data {
-    margin: 20px 50px;
+    background: linear-gradient(99.9deg, rgba(27, 24, 31, 1) 21.2%, rgba(50, 4, 89, 1) 84.8%);
+    backdrop-filter: blur(10px);
+    /* Bulanıklaştırma miktarını ayarlayabilirsiniz */
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
     border: #d8b4fe58 0.2px solid;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-    color: #d8b4fe;
-
-
+    backdrop-filter: blur(10px);
 
 }
 
+.closeBtn {
+    font-size: 30px;
+    margin: 2% 2% 0 95%;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.fa-xmark {
+    color: #d8b4fe;
+    font-size: 40px;
+}
+
+
 .image-data {
     border-radius: 20px;
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
     overflow: hidden;
+   
 
 }
 
 
 .image-data>img {
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
     object-fit: cover;
     object-position: center center;
     border-radius: 20px;
-    margin-top: 20px;
+
 }
 
 .container-data>.img-details {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 10px;
+    gap: 5px;
     padding: 0 50px;
     margin-bottom: 50px;
 
 
+
 }
 
-
+.details-container .active {
+    display: none;
+}
 
 
 /*Responsive*/
@@ -244,8 +274,10 @@ button i:hover {
         height: 400px;
     }
 
-
-
+    .closeBtn {
+        font-size: 30px;
+        margin: 0 2% 0 50%;
+    }
 }
 
 
@@ -283,5 +315,11 @@ button i:hover {
 
     .img-details h2 {
         text-align: center;
+    }
+
+
+    .closeBtn {
+        font-size: 30px;
+        margin: 0 1% 0 50%;
     }
 }
